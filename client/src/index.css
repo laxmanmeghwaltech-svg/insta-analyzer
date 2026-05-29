@@ -43,58 +43,62 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
+  /* Laxman's Brand Colors */
+  --primary: oklch(0.35 0.15 264); /* Electric Cyan #00E5C8 */
+  --primary-foreground: oklch(0.98 0.001 286); /* Near white */
+  --sidebar-primary: oklch(0.25 0.12 264); /* Deep Navy variant */
+  --sidebar-primary-foreground: oklch(0.98 0.001 286);
+  --chart-1: oklch(0.35 0.15 264); /* Cyan */
+  --chart-2: oklch(0.25 0.12 264); /* Deep Navy */
+  --chart-3: oklch(0.65 0.18 50); /* Amber */
+  --chart-4: oklch(0.55 0.22 27); /* Red */
+  --chart-5: oklch(0.30 0.13 264); /* Navy darker */
   --radius: 0.65rem;
+  /* Light mode: Clean white background with deep navy text */
   --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
+  --foreground: oklch(0.15 0.05 264); /* Deep Navy text */
+  --card: oklch(0.98 0.001 286);
+  --card-foreground: oklch(0.15 0.05 264);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
+  --popover-foreground: oklch(0.15 0.05 264);
+  --secondary: oklch(0.92 0.01 50); /* Light Amber */
+  --secondary-foreground: oklch(0.25 0.12 264);
+  --muted: oklch(0.94 0.005 286);
+  --muted-foreground: oklch(0.45 0.01 286);
+  --accent: oklch(0.35 0.15 264); /* Cyan accent */
+  --accent-foreground: oklch(0.98 0.001 286);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.92 0.004 286.32);
   --input: oklch(0.92 0.004 286.32);
   --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --sidebar: oklch(0.98 0.001 286); /* Light sidebar */
+  --sidebar-foreground: oklch(0.15 0.05 264); /* Deep Navy text */
+  --sidebar-accent: oklch(0.35 0.15 264); /* Electric Cyan */
+  --sidebar-accent-foreground: oklch(0.98 0.001 286);
+  --sidebar-border: oklch(0.92 0.004 286);
+  --sidebar-ring: oklch(0.35 0.15 264);
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
+  /* Laxman's Brand Colors - Dark Mode */
+  --primary: oklch(0.45 0.18 264); /* Brighter Cyan for dark bg */
+  --primary-foreground: oklch(0.98 0.001 286);
+  --sidebar-primary: oklch(0.40 0.16 264);
+  --sidebar-primary-foreground: oklch(0.98 0.001 286);
+  /* Dark mode: Deep Navy background with light text */
+  --background: oklch(0.12 0.05 264); /* Deep Navy */
+  --foreground: oklch(0.92 0.005 286); /* Light gray text */
+  --card: oklch(0.18 0.06 264);
+  --card-foreground: oklch(0.92 0.005 286);
+  --popover: oklch(0.18 0.06 264);
+  --popover-foreground: oklch(0.92 0.005 286);
+  --secondary: oklch(0.50 0.12 50); /* Amber */
+  --secondary-foreground: oklch(0.98 0.001 286);
+  --muted: oklch(0.25 0.06 286);
+  --muted-foreground: oklch(0.65 0.01 286);
+  --accent: oklch(0.45 0.18 264); /* Bright Cyan */
+  --accent-foreground: oklch(0.12 0.05 264);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(1 0 0 / 10%);
@@ -105,20 +109,30 @@
   --chart-3: var(--color-blue-600);
   --chart-4: var(--color-blue-700);
   --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  --sidebar: oklch(0.15 0.05 264); /* Deep Navy sidebar */
+  --sidebar-foreground: oklch(0.92 0.005 286); /* Light text */
+  --sidebar-accent: oklch(0.45 0.18 264); /* Bright Cyan */
+  --sidebar-accent-foreground: oklch(0.12 0.05 264);
+  --sidebar-border: oklch(0.25 0.06 264);
+  --sidebar-ring: oklch(0.45 0.18 264);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  }
   body {
     @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 400;
+  }
+  code, pre {
+    font-family: 'Space Mono', monospace;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -130,6 +144,19 @@
   input[type="checkbox"]:not(:disabled),
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
+  }
+}
+
+@layer utilities {
+  /* Premium shadow utilities */
+  .shadow-premium {
+    box-shadow: 0 4px 6px -1px oklch(0 0 0 / 0.1), 0 2px 4px -2px oklch(0 0 0 / 0.1);
+  }
+  .shadow-premium-lg {
+    box-shadow: 0 20px 25px -5px oklch(0 0 0 / 0.1), 0 8px 10px -6px oklch(0 0 0 / 0.1);
+  }
+  .shadow-premium-xl {
+    box-shadow: 0 25px 50px -12px oklch(0 0 0 / 0.15);
   }
 }
 

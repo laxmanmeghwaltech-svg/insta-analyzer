@@ -25,4 +25,20 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * Cache for Instagram post analysis results.
+ * Stores AI-generated descriptions and scripts for posts.
+ */
+export const postAnalysis = mysqlTable('postAnalysis', {
+  id: int('id').autoincrement().primaryKey(),
+  userId: int('userId').notNull(),
+  instagramPostId: varchar('instagramPostId', { length: 64 }).notNull(),
+  description: text('description'),
+  contentCategory: varchar('contentCategory', { length: 64 }),
+  script: text('script'),
+  createdAt: timestamp('createdAt').defaultNow().notNull(),
+  updatedAt: timestamp('updatedAt').defaultNow().onUpdateNow().notNull(),
+});
+
+export type PostAnalysis = typeof postAnalysis.$inferSelect;
+export type InsertPostAnalysis = typeof postAnalysis.$inferInsert;

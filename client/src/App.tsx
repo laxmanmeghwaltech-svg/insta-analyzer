@@ -4,13 +4,36 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
+import DashboardLayout from "./components/DashboardLayout";
+import Dashboard from "./pages/Dashboard";
+import Posts from "./pages/Posts";
+import PostDetail from "./pages/PostDetail";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
+      <Route path={"/"} nest>
+        {() => (
+          <DashboardLayout>
+            <Dashboard />
+          </DashboardLayout>
+        )}
+      </Route>
+      <Route path={"/posts"} nest>
+        {() => (
+          <DashboardLayout>
+            <Posts />
+          </DashboardLayout>
+        )}
+      </Route>
+      <Route path={"/posts/:id"} nest>
+        {() => (
+          <DashboardLayout>
+            <PostDetail />
+          </DashboardLayout>
+        )}
+      </Route>
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
